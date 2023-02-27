@@ -36,8 +36,11 @@ router.route("/").get(async (req, res) => {
 
       res.status(200).json({ data: array });
     }
+    else{
+      res.status(400).send("Could Not fetch Data");
+    }
   } catch (error) {
-    res.status(500).send(error);
+    res.status(440).json({ data: error });
   }
 });
 

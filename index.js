@@ -17,9 +17,14 @@ app.get("/", (req,res)=>{
 app.use("/api/unsplash", routes)
 
 const startServer = async () => {
-    app.listen(8080, ()=>{
-        console.log("App is running on PORT 8080")
-    })
+    try{
+        app.listen(8080, ()=>{
+            console.log("App is running on PORT 8080")
+        })
+    }
+    catch(error){
+        console.log(error)
+    }
 }
 
 startServer();
