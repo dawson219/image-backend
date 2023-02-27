@@ -37,7 +37,7 @@ router.route("/").get(async (req, res) => {
       res.status(200).json({ data: array });
     }
   } catch (error) {
-    res.status(500).send("Error in Fetching Images");
+    res.status(500).send(error);
   }
 });
 
